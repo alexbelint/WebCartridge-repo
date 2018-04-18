@@ -1,0 +1,26 @@
+﻿@model WebCartridgeJournalAuth.Models.Color
+
+@{
+    ViewBag.Title = "Details";
+}
+
+@*<h2>Подробности</h2>*@
+
+<div>
+    <h4>Цвет</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ColorName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ColorName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Правка", "Edit", new { id = Model.ColorId }) |
+    @Html.ActionLink("Назад к списку", "Index")
+</p>

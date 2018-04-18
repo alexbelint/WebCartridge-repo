@@ -1,0 +1,71 @@
+﻿@model IEnumerable<WebCartridgeJournalAuth.Models.Cartridge>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h3>Журнал по учету картриджей</h3>
+<div>
+    <p>
+        @Html.ActionLink("Создать новую запись", "Create")
+    </p>
+</div>
+@*@using (Html.BeginForm())
+    {
+        <p>
+            Select Department: @Html.DropDownList("SelectedDepartment")
+            <input type="submit" value="Filter" />
+        </p>
+    }*@
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Brand.BrandName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Color.ColorName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Department.DepatmentName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Purchase_Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Installation_Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Deinstallation_Date)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Brand.BrandName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Color.ColorName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Department.DepatmentName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Purchase_Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Installation_Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Deinstallation_Date)
+            </td>
+            <td>
+                @Html.ActionLink("Редактировать", "Edit", new { id = item.CartridgeID }) |
+                @Html.ActionLink("Подробнее", "Details", new { id = item.CartridgeID }) |
+                @Html.ActionLink("Удалить", "Delete", new { id = item.CartridgeID })
+            </td>
+        </tr>
+    }
+</table>

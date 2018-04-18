@@ -1,0 +1,66 @@
+﻿@model WebCartridgeJournalAuth.Models.Cartridge
+
+@{
+    ViewBag.Title = "Details";
+}
+
+@*<h2>Подробности</h2>*@
+
+<div>
+    <h4>Картридж</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Brand.BrandName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Brand.BrandName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Color.ColorName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Color.ColorName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Department.DepatmentName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Department.DepatmentName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Purchase_Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Purchase_Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Installation_Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Installation_Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Deinstallation_Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Deinstallation_Date)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Править", "Edit", new { id = Model.CartridgeID }) |
+    @Html.ActionLink("Назад к списку", "Index")
+</p>

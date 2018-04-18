@@ -1,0 +1,26 @@
+﻿@model WebCartridgeJournalAuth.Models.Brand
+
+@{
+    ViewBag.Title = "Details";
+}
+
+@*<h2>Подробности</h2>*@
+
+<div>
+    <h4>Модель</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BrandName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BrandName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Править", "Edit", new { id = Model.BrandID }) |
+    @Html.ActionLink("Назад к списку", "Index")
+</p>
